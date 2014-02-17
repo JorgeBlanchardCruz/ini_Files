@@ -33,7 +33,7 @@ span.repeated { background-color: red }
 span.header { background-color: blue }
 span.comments { background-color: gray/*______*/ }
 span.blanks { background-color: white }
-span.nameEqualValue { background-color: green/*____*/ }
+span.nameEqualValue { background-color: ____ }
 span.error { background-color: red }
 
 body
