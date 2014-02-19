@@ -40,3 +40,23 @@ body
 {
  background-color:#b0c4de;  /* blue */
 }
+
+#drop_zone{
+	width:510px;
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #2E3134;
+    border-color: rgba(0, 0, 0, 0);
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 20px;
+    color: #7F858A;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    padding: 40px 50px;
+    text-align: center;
+    text-transform: uppercase;
+}
