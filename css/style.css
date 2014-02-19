@@ -1,6 +1,6 @@
 html *
 {
-   font-size: large; 
+   font-size: large;
    /* The !important ensures that nothing can override what you've set in this style (unless it is also important). */
    font-family: Arial;
 }
@@ -11,24 +11,24 @@ html *
     margin: 10px 5px 0 0;
   }
 
-h1            { text-align: center; font-size: x-large; }
-th, td        { vertical-align: top; text-align: left; }   
-/* #finaltable  * { color: white; background-color: black; }   */
+h1 { text-align: center; font-size: x-large; }
+th, td { vertical-align: top; text-align: left; }
+/* #finaltable * { color: white; background-color: black; } */
 
 /* #finaltable table { border-collapse:collapse; } */
 /* #finaltable table, td { border:1px solid white; } */
-#finaltable:hover td { background-color: blue; } 
-tr:nth-child(odd)    { background-color:#eee; }
-tr:nth-child(even)    { background-color:#00FF66; }
-input        { text-align: right;  border: none;       }     /* Align input to the right  */
-textarea     { border: outset; border-color: white;       }                        
-table        { border: inset; border-color: white; }
-.hidden      { display: none; }
-.unhidden    { display: block; }
+#finaltable:hover td { background-color: blue; }
+tr:nth-child(odd) { background-color:#eee; }
+tr:nth-child(even) { background-color:#00FF66; }
+input { text-align: right; border: none; } /* Align input to the right */
+textarea { border: outset; border-color: white; }
+table { border: inset; border-color: white; }
+.hidden { display: none; }
+.unhidden { display: block; }
 table.center { margin-left:auto; margin-right:auto; }
-#result      { border-color: red; }
-tr.error       { background-color: red; }
-pre.output   { background-color: white; }
+#result { border-color: red; }
+tr.error { background-color: red; }
+pre.output { background-color: white; }
 span.repeated { background-color: red }
 span.header { background-color: blue }
 span.comments { background-color: orange }
@@ -38,7 +38,7 @@ span.error { background-color: red }
 
 body
 {
- background-color:#b0c4de;  /* blue */
+ background-color:#b0c4de; /* blue */
 }
 
 #drop_zone{
@@ -59,4 +59,19 @@ body
     padding: 40px 50px;
     text-align: center;
     text-transform: uppercase;
+}
+.center{
+  margin:0 auto;
+  width:650px;
+}
+.title{
+  text-align: center;
+  color: rgb(86, 86, 86);
+  margin-bottom: 50px;
+  margin-top: 20px;
+  text-transform: lowercase;
+  cursor: default;
+  font-family: 'Pompiere', cursive;
+  font-size: 3em;
+  font-weight: bold;
 }
