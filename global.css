@@ -31,9 +31,9 @@ tr.error       { background-color: red; }
 pre.output   { background-color: white; }
 span.repeated { background-color: red }
 span.header { background-color: blue }
-span.comments { background-color: gray/*______*/ }
-span.blanks { background-color: white }
-span.nameEqualValue { background-color: green/*____*/ }
+span.comments { background-color: orange }
+span.blanks { background-color: green }
+span.nameEqualValue { background-color: cyan }
 span.error { background-color: red }
 
 body

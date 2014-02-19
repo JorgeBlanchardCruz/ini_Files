@@ -8,7 +8,7 @@ function calculate(evt) {
   var f = evt.target.files[0]; 
 
   if (f) {
-    var r = new filereader();
+    var r = new FileReader();
     r.onload = function(e) { 
       var contents = e.target.result;
       
@@ -19,34 +19,31 @@ function calculate(evt) {
       initialinput.innerHTML = contents;
       finaloutput.innerHTML = pretty;
     }
-    r.readAsText(f); // Leer como texto
+    r.readAsText(f);
   } else { 
     alert("Failed to load file");
   }
 }
 
-var temp = '<li> <span class = "<%= t.type %>"> <%= _ %> </span>\n';
+var temp = '<li> <span class = "<%= token.type %>"> <%= match %> </span>\n';
 
 function tokensToString(tokens) {
    var r = '';
-   for(var i in tokens) {
-     var t = tokens[i];
+   for(var i=0; i < tokens.length; i++) {
+     var t = tokens[i]
      var s = JSON.stringify(t, undefined, 2);
-     s = _.template(temp, {t: t, s: s});
+     s = _.template(temp, {token: t, match: s});
      r += s;
    }
    return '<ol>\n'+r+'</ol>';
 }
 
 function lexer(input) {
-  var blanks         = /^\s*/;
-  var iniheader      = /^________________/;
-                    // /^\[\w+(\s*\w*)*\]$
-  var comments       = /^________/;
-                    // /^;.*$
-  var nameEqualValue = /^________________________/;
-                    // /^(.*?)\s*=\s*(.*)$
-  var any            = /^_______/;
+  var blanks         = /^\s+/;
+  var iniheader      = /^\[([^\]\r\n]+)\]/;
+  var comments       = /^[;#](.*)/;
+  var nameEqualValue = /^([^=;\r\n]+)=([^;\r\n]*)/;
+  var any            = /^(.|\n)+/;
 
   var out = [];
   var m = null;
@@ -54,22 +51,23 @@ function lexer(input) {
   while (input != '') {
     if (m = blanks.exec(input)) {
       input = input.substr(m.index+m[0].length);
-      out.push({ type : "Blancos", match: m });
+      out.push({ type : 'blanks', match: m });
     }
     else if (m = iniheader.exec(input)) {
-      input = input.substr(___________________);
-      _______________________________________ // avanzemos en input
+      input = input.substr(m.index+m[0].length);
+      out.push({ type: 'header', match: m });
     }
     else if (m = comments.exec(input)) {
-      input = input.substr(___________________);
-      _________________________________________
+      input = input.substr(m.index+m[0].length);
+      out.push({ type: 'comments', match: m });
     }
     else if (m = nameEqualValue.exec(input)) {
-      input = input.substr(___________________);
-      _______________________________________________
+      /* while (match casa con /\\$/) concatena la siguiente línea */
+      input = input.substr(m.index+m[0].length);
+      out.push({ type: 'nameEqualValue', match: m });
     }
     else if (m = any.exec(input)) {
-      _______________________________________
+      out.push({ type: 'error', match: m });
       input = '';
     }
     else {
@@ -79,3 +77,4 @@ function lexer(input) {
   }
   return out;
 }
+
