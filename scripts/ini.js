@@ -42,31 +42,7 @@ function handleFileSelect(evt) {
     document.getElementById('txtfileAttributes').innerHTML = fileAttributes;
     
     // obtener el contenido del fichero
-    var f = evt.dataTransfer.files[0]; 	
-	if (f) {	
-		var r = new FileReader();
-		
-		r.onload = function(e) { 
-			var contents = e.target.result;
-			var tokens = lexer(contents);
-			var pretty = tokensToString(tokens);
-		  
-			out.className = 'unhidden';
-			initialinput.innerHTML = contents;
-			finaloutput.innerHTML = pretty;	
-					
-			// LocalStorage
-			if (window.localStorage){
-				localStorage.fileAttributes = fileAttributes;
-				localStorage.initialinput  = contents;
-				localStorage.finaloutput  = pretty;
-			}		
-		}
-		r.readAsText(f);		
-	} 
-	else{ 
-		alert("Failed to load file");
-	}
+	calculate(evt.dataTransfer.files[0]);
 }
 //-------------------------------------------------------------------------------------------
 function handleDragOver(evt) {
@@ -83,10 +59,31 @@ var temp = '<li> <span class = "<%= token.type %>"> <%= match %> </span>\n';
 
 
 //-------------------------------------------------------------------------------------------
-function calculate(file){
-	
-	
-	
+function calculate(file){	
+	if (file) {	
+		var r = new FileReader();
+		
+		r.onload = function(e) { // se ejecuta cuando termina de cargar el fichero
+			var contents = e.target.result;
+			var tokens = lexer(contents);
+			var pretty = tokensToString(tokens);
+		  
+			out.className = 'unhidden';
+			initialinput.innerHTML = contents;
+			finaloutput.innerHTML = pretty;	
+					
+			// LocalStorage
+			if (window.localStorage){
+				localStorage.fileAttributes = fileAttributes;
+				localStorage.initialinput  = contents;
+				localStorage.finaloutput  = pretty;
+			}		
+		}
+		r.readAsText(file);		
+	} 
+	else{ 
+		alert("Failed to load file");
+	}	
 }
 //-------------------------------------------------------------------------------------------
 function tokensToString(tokens) {
