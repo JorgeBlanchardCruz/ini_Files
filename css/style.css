@@ -83,46 +83,46 @@ table.table th        { vertical-align: top; font-size: 150%;}
 ol.ol_output {color: black; font-weight: bold; }
 li {border-radius: 10px 10px 10px 10px; padding: 1%;}
 
-/*li.repeated                    { background-color: #ff9a9a; transition:.3s;}
-li.repeated span               { color: white; transition:.3s; }
-li.repeated:hover              { background-color: #ff0000; transition:.3s;} 
-li.repeated:hover span         { color: black; transition:.3s; }
+li.repeated                    { background-color: #ff9a9a; transition:.5s;}
+li.repeated span               { color: white; transition:.5s; }
+li.repeated:hover              { background-color: #ff0000; transition:.5s;} 
+li.repeated:hover span         { color: black; transition:.5s; }
 
-li.header                      { background-color: #e6efff; transition:.3s;}
-li.header span                 { color: black; transition:.3s; }
-li.header:hover                { background-color: #005aff; transition:.3s;}
-li.header:hover span           { color: white; transition:.3s; }
+li.header                      { background-color: #e6efff; transition:.5s;}
+li.header span                 { color: black; transition:.5s; }
+li.header:hover                { background-color: #005aff; transition:.5s;}
+li.header:hover span           { color: white; transition:.5s; }
 
-li.comments                    { background-color: #ffead5; transition:.3s; }
-li.comments span               { color: black; transition:.3s; }
-li.comments:hover              { background-color: #f37d0a; transition:.3s; }
-li.comments:hover span         { color: white; transition:.3s; }
+li.comments                    { background-color: #ffead5; transition:.5s; }
+li.comments span               { color: black; transition:.5s; }
+li.comments:hover              { background-color: #f37d0a; transition:.5s; }
+li.comments:hover span         { color: white; transition:.5s; }
 
-li.blanks                      { background-color: #ebffd5; transition:.3s; }
-li.blanks span                 { color: black; transition:.3s; }
-li.blanks:hover                { background-color: #63bc03; transition:.3s; }
-li.blanks:hover span           { color: white; transition:.3s; }
+li.blanks                      { background-color: #ebffd5; transition:.5s; }
+li.blanks span                 { color: black; transition:.5s; }
+li.blanks:hover                { background-color: #63bc03; transition:.5s; }
+li.blanks:hover span           { color: white; transition:.5s; }
 
-li.nameEqualValue              { background-color: #d5fffb; transition:.3s; }
-li.nameEqualValue span         { color: black; transition:.3s; }
-li.nameEqualValue:hover        { background-color: #0dd7c2; transition:.3s; }
-li.nameEqualValue:hover span   { color: white; transition:.3s; }
+li.nameEqualValue              { background-color: #d5fffb; transition:.5s; }
+li.nameEqualValue span         { color: black; transition:.5s; }
+li.nameEqualValue:hover        { background-color: #0dd7c2; transition:.5s; }
+li.nameEqualValue:hover span   { color: white; transition:.5s; }
 
-li.error                       { background-color: #ff9a9a; transition:.3s; }
-li.error span                  { color: black; transition:.3s; }
-li.error:hover                 { background-color: #ff0000; transition:.3s; }
-li.error:hover span            { color: white; transition:.3s; }*/
+li.error                       { background-color: #ff9a9a; transition:.5s; }
+li.error span                  { color: black; transition:.5s; }
+li.error:hover                 { background-color: #ff0000; transition:.5s; }
+li.error:hover span            { color: white; transition:.5s; }
 
 
 
-li.repeated                    { background-color: #ff9a9a;}
+/*li.repeated                    { background-color: #ff9a9a; }
 li.repeated span               { color: white; }
 li.repeated:hover              { background-color: #ff0000; } 
 li.repeated:hover span         { color: black; }
 
-li.header                      { background-color: #e6efff;}
+li.header                      { background-color: #e6efff; }
 li.header span                 { color: black; }
-li.header:hover                { background-color: #005aff;}
+li.header:hover                { background-color: #005aff; }
 li.header:hover span           { color: white; }
 
 li.comments                    { background-color: #ffead5; }
@@ -143,4 +143,4 @@ li.nameEqualValue:hover span   { color: white; }
 li.error                       { background-color: #ff9a9a; }
 li.error span                  { color: black; }
 li.error:hover                 { background-color: #ff0000;}
-li.error:hover span            { color: white; }
+li.error:hover span            { color: white; }*/
