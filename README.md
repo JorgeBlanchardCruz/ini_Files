@@ -1,4 +1,4 @@
-Comma Separated Values en JavaScript
+Parser de Archivos INI en JavaScript
 ====================================
 
 * **Universidad:** La Laguna
@@ -6,10 +6,10 @@ Comma Separated Values en JavaScript
 * **Carrera:** Grado de Informatica
 * **Asignatura:** Procesadores de Lenguajes
 * **Profesor:** Casiano Rodriguez
-* **Práctica:** Comma Separated Values en JavaScript
+* **Práctica:** Parser de Archivos INI en JavaScript
 * **Autor:** Jorge O. Blanchard Cruz y Gonzalo J. García Martin
 
-Practica de Comma Separated Values en JavaScript, es la segunda práctica de la asignatura de procesadores del lenguaje
+Practica de Parser de Archivos INI Values en JavaScript, es la segunda práctica de la asignatura de procesadores del lenguaje
 
 Comprueba su funcionamiento en 
 [CSV en GitHub Pages Jorge](http://alu0100536591.github.io/ini_Files/)
