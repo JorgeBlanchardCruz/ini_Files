@@ -8,32 +8,36 @@
 		 
 		 <link href="css/style.css" rel="stylesheet" type="text/css">		
 		 <link rel="shortcut icon" href="assets/etsiiull.png" type="image/x-icon">
+		 <script type="text/javascript" src="scripts/ini.js"></script>
 	</head>
 	<body>
 		
-		<h1>INI files</h1>		
-		<div id="drop_zone">Drop files here</div>
-		<output id="txtfileAttributes"></output>
-
+		<!-- template -->
+		<script type="text/html" id="table_template">
+		<ol class="ol_output"> <% _.each(tokens, function(token, index){ %> <li class = "<%= token.type %>"> <span> <%= matches[index] %> </span></li> <% }); %> </ol>
+		</script>
+		
+		<table class="table">
+		  <tr><td><h1>INI Files</h1></td></tr>
+		  <tr><td><h2><div id="drop_zone">Drop files here</h2></div></td></tr>
+		  <tr><td><h3><output id="txtfileAttributes"></output></h3></td></tr>
+		</table>
+		
 		<div id="out" class="hidden">
 			
-			
-		<table>
+		<table class="table">
 		  <tr><th>Original</th><th>Tokens</th></tr>
 		  <tr>
-			<td>
-				
+			<td class="table_input">
 			  <pre class="input" id="initialinput"></pre>
 			</td>
-			<td>
+			<td class="table_output">
 			  <pre class="output" id="finaloutput"></pre>
 			</td>
 		  </tr>
-		</table>
+		</table>	
 		
-		<script type="text/javascript" src="scripts/ini.js"></script>
-		</div> 
+		</div>		
 		
-		<a href="tests/index.html">Pruebas Mocha y Chai</a>
 	  </body>
 </html>

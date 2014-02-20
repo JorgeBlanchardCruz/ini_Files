@@ -1,77 +1,146 @@
 html *
 {
-   font-size: large;
-   /* The !important ensures that nothing can override what you've set in this style (unless it is also important). */
-   font-family: Arial;
+    font-size: small; 
+    font-family: Courier New;
 }
 
+body
+{
+	background-color: #8a9877
+}
+
+button, .button {
+	background-color:#475869;
+	-webkit-border-top-left-radius:6px;
+	-moz-border-radius-topleft:6px;
+	border-top-left-radius:6px;
+	-webkit-border-top-right-radius:6px;
+	-moz-border-radius-topright:6px;
+	border-top-right-radius:6px;
+	-webkit-border-bottom-right-radius:6px;
+	-moz-border-radius-bottomright:6px;
+	border-bottom-right-radius:6px;
+	-webkit-border-bottom-left-radius:6px;
+	-moz-border-radius-bottomleft:6px;
+	border-bottom-left-radius:6px;
+	text-indent:0;
+	border:2px solid #18324d;
+	display:inline-block;
+	color:#ffffff;
+	font-family: inherit;
+	font-size:18px;
+	font-weight:normal;
+	font-style:normal;
+	height:40px;
+	line-height:40px;
+	width:200px;
+	text-decoration:none;
+	text-align:center;
+}.button:hover {
+	background-color:#80b5ea;
+}.button:active {
+	position:relative;
+	top:1px;
+}
+
+h1 {
+    background: #7e8573;
+    padding: 10px;
+    border: 2px solid #d8e3ea;
+    border-radius: 20px;
+    color: #010e20;
+    text-align: center;
+    font-size: 400%;
+   	margin-left:5%; 
+	margin-right:5%;
+}
+h2 {
+	text-align: center;
+	font-size: 135%;
+}
+h3 {
+	text-align: center;
+    font-size: 75%;
+}
+.hidden   { display: none; }
+.unhidden { display: block; }
+
+#drop_zone {
+	width: auto;
+	height: 100px;
+	border: 10px dashed #d8e3ea;
+	border-radius: 15%;
+	background-color: #579194;
+	margin-left:20%; 
+	margin-right:20%;
+	text-align: center;
+	color: #0e2f31;
+	font-size: 2em;
+	font-family: Courier New;
+	padding: 2%;
+	
+	transition:.15s;
+}
 .thumb {
     height: 75px;
     border: 1px solid #000;
     margin: 10px 5px 0 0;
-  }
-
-h1 { text-align: center; font-size: x-large; }
-th, td { vertical-align: top; text-align: left; }
-/* #finaltable * { color: white; background-color: black; } */
-
-/* #finaltable table { border-collapse:collapse; } */
-/* #finaltable table, td { border:1px solid white; } */
-#finaltable:hover td { background-color: blue; }
-tr:nth-child(odd) { background-color:#eee; }
-tr:nth-child(even) { background-color:#00FF66; }
-input { text-align: right; border: none; } /* Align input to the right */
-textarea { border: outset; border-color: white; }
-table { border: inset; border-color: white; }
-.hidden { display: none; }
-.unhidden { display: block; }
-table.center { margin-left:auto; margin-right:auto; }
-#result { border-color: red; }
-tr.error { background-color: red; }
-pre.output { background-color: white; }
-span.repeated { background-color: red }
-span.header { background-color: blue }
-span.comments { background-color: orange }
-span.blanks { background-color: green }
-span.nameEqualValue { background-color: cyan }
-span.error { background-color: red }
-
-body
-{
- background-color:#b0c4de; /* blue */
 }
 
-#drop_zone{
-	width:510px;
-    -moz-border-bottom-colors: none;
-    -moz-border-left-colors: none;
-    -moz-border-right-colors: none;
-    -moz-border-top-colors: none;
-    background-color: #2E3134;
-    border-color: rgba(0, 0, 0, 0);
-    border-radius: 3px;
-    border-style: solid;
-    border-width: 20px;
-    color: #7F858A;
-    font-size: 16px;
-    font-weight: bold;
-    margin-bottom: 30px;
-    padding: 40px 50px;
-    text-align: center;
-    text-transform: uppercase;
+table.table {
+	border: 3px;
+    background-color: #OldLace;
+    margin-left:auto; 
+    margin-right:auto;
+
+    min-width: 90%;
+    max-width: 90%;
+    border-spacing:0%;
+    border-collapse: separate;
 }
-.center{
-  margin:0 auto;
-  width:650px;
+table.table td.table_input {
+	border-radius: 5px;
+    overflow-x: auto;
+    max-width: 1000px;
+    padding: 1%;
+    border-style: none;
+    background-color: white;
 }
-.title{
-  text-align: center;
-  color: rgb(86, 86, 86);
-  margin-bottom: 50px;
-  margin-top: 20px;
-  text-transform: lowercase;
-  cursor: default;
-  font-family: 'Pompiere', cursive;
-  font-size: 3em;
-  font-weight: bold;
+table.table td.table_output {
+	border-radius: 5px;
+	overflow-x: auto;
+	max-width: 700px;
+	
+    padding: 1%;
+    border-style: none;
+    background-color: white; 
 }
+table.table td        { vertical-align: top; text-align: left;} 
+table.table th        { vertical-align: top; font-size: 150%;} 
+
+ol.ol_output {color: black; font-weight: bold; }
+li {border-radius: 2px; padding: 1%;}
+
+li.repeated                    { background-color: #c7ba5e;}
+li.repeated span               { color: white; }
+li.repeated:hover span         { color: #897c1d; transition:.5s; }
+
+li.header                      { background-color: #5e75a1; }
+li.header span                 { color: black; }
+li.header:hover span           { color: #233d71; transition:.5s; }
+
+li.comments                    { background-color: #f4b270; }
+li.comments span               { color: black; }
+li.comments:hover span         { color: #da6d00; transition:.5s; }
+
+li.blanks                      { background-color: #b4d07a; }
+li.blanks span                 { color: black; }
+li.blanks:hover span           { color: #668f12; transition:.5s; }
+
+li.nameEqualValue              { background-color: #82bab4; }
+li.nameEqualValue span         { color: black;  }
+li.nameEqualValue:hover span   { color: #008175; transition:.5s; }
+
+li.error                       { background-color: #d65f5f; }
+li.error span                  { color: white; }
+li.error:hover span            { color: #7a1313; transition:.5s; }
