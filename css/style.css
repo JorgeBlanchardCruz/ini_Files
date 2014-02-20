@@ -50,7 +50,7 @@ h3 {
 
 table.table {
 	border: 3px;
-    background-color: rgba(0, 0, 0, 0);
+    background-color: #OldLace;
     margin-left:auto; 
     margin-right:auto;
 
@@ -62,7 +62,7 @@ table.table {
 table.table td.table_input {
 	border-radius: 5px;
     overflow-x: auto;
-    max-width: 40%;
+    max-width: 1000px;
     padding: 1%;
     border-style: none;
     background-color: white;
@@ -70,7 +70,7 @@ table.table td.table_input {
 table.table td.table_output {
 	border-radius: 5px;
 	overflow-x: auto;
-	max-width: 60%;
+	max-width: 700px;
 	
     padding: 1%;
     border-style: none;
@@ -82,7 +82,31 @@ table.table th        { vertical-align: top; font-size: 150%;}
 ol.ol_output {color: black; font-weight: bold; }
 li {border-radius: 2px; padding: 1%;}
 
-li.repeated                    { background-color: #ff9a9a; transition:.2s;}
+li.repeated                    { background-color: #ff9a9a;}
+li.repeated span               { color: white; }
+li.repeated:hover span         { color: #ff0000; transition:.5s; }
+
+li.header                      { background-color: #e6efff; }
+li.header span                 { color: black; }
+li.header:hover span           { color: #005aff; transition:.5s; }
+
+li.comments                    { background-color: #ffead5;}
+li.comments span               { color: black; }
+li.comments:hover span         { color: #f37d0a; transition:.5s; }
+
+li.blanks                      { background-color: #ebffd5; }
+li.blanks span                 { color: black; }
+li.blanks:hover span           { color: #63bc03; transition:.5s; }
+
+li.nameEqualValue              { background-color: #d5fffb; }
+li.nameEqualValue span         { color: black;  }
+li.nameEqualValue:hover span   { color: #0dd7c2; transition:.5s; }
+
+li.error                       { background-color: #ff9a9a; }
+li.error span                  { color: black; }
+li.error:hover span            { color: #ff0000; transition:.5s; }
+
+/*li.repeated                    { background-color: #ff9a9a; transition:.2s;}
 li.repeated span               { color: white; transition:.2s; }
 li.repeated:hover              { background-color: #ff0000; transition:.2s;} 
 li.repeated:hover span         { color: black; transition:.2s; }
@@ -110,36 +134,5 @@ li.nameEqualValue:hover span   { color: white; transition:.2s; }
 li.error                       { background-color: #ff9a9a; transition:.2s; }
 li.error span                  { color: black; transition:.2s; }
 li.error:hover                 { background-color: #ff0000; transition:.2s; }
-li.error:hover span            { color: white; transition:.2s; }
+li.error:hover span            { color: white; transition:.2s; }*/
 
-
-
-/*li.repeated                    { background-color: #ff9a9a; }
-li.repeated span               { color: white; }
-li.repeated:hover              { background-color: #ff0000; } 
-li.repeated:hover span         { color: black; }
-
-li.header                      { background-color: #e6efff; }
-li.header span                 { color: black; }
-li.header:hover                { background-color: #005aff; }
-li.header:hover span           { color: white; }
-
-li.comments                    { background-color: #ffead5; }
-li.comments span               { color: black;}
-li.comments:hover              { background-color: #f37d0a; }
-li.comments:hover span         { color: white; }
-
-li.blanks                      { background-color: #ebffd5; }
-li.blanks span                 { color: black; }
-li.blanks:hover                { background-color: #63bc03; }
-li.blanks:hover span           { color: white; }
-
-li.nameEqualValue              { background-color: }
-li.nameEqualValue span         { color: black; }
-li.nameEqualValue:hover        { background-color: #0dd7c2; }
-li.nameEqualValue:hover span   { color: white; }
-
-li.error                       { background-color: #ff9a9a; }
-li.error span                  { color: black; }
-li.error:hover                 { background-color: #ff0000;}
-li.error:hover span            { color: white; }*/
