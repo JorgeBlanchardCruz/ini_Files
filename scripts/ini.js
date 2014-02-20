@@ -30,7 +30,7 @@ function handleFileSelect(evt) {
     evt.stopPropagation();
     evt.preventDefault();
     
-    evt.target.style.background = "#2E3134";
+    evt.target.style.background = "#579194";
 
 	var files = evt.dataTransfer.files; // FileList object.
 

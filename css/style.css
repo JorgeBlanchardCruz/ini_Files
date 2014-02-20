@@ -6,20 +6,61 @@ html *
 
 body
 {
-	background-color: whitesmoke;
+	background-color: #8a9877
+}
+
+button, .button {
+	background-color:#475869;
+	-webkit-border-top-left-radius:6px;
+	-moz-border-radius-topleft:6px;
+	border-top-left-radius:6px;
+	-webkit-border-top-right-radius:6px;
+	-moz-border-radius-topright:6px;
+	border-top-right-radius:6px;
+	-webkit-border-bottom-right-radius:6px;
+	-moz-border-radius-bottomright:6px;
+	border-bottom-right-radius:6px;
+	-webkit-border-bottom-left-radius:6px;
+	-moz-border-radius-bottomleft:6px;
+	border-bottom-left-radius:6px;
+	text-indent:0;
+	border:2px solid #18324d;
+	display:inline-block;
+	color:#ffffff;
+	font-family: inherit;
+	font-size:18px;
+	font-weight:normal;
+	font-style:normal;
+	height:40px;
+	line-height:40px;
+	width:200px;
+	text-decoration:none;
+	text-align:center;
+}.button:hover {
+	background-color:#80b5ea;
+}.button:active {
+	position:relative;
+	top:1px;
 }
 
 h1 {
-   text-align: center;
-   font-size: 400%;
+    background: #7e8573;
+    padding: 10px;
+    border: 2px solid #d8e3ea;
+    border-radius: 20px;
+    color: #010e20;
+    text-align: center;
+    font-size: 400%;
+   	margin-left:5%; 
+	margin-right:5%;
 }
 h2 {
 	text-align: center;
 	font-size: 135%;
 }
 h3 {
-   text-align: center;
-   font-size: 75%;
+	text-align: center;
+    font-size: 75%;
 }
 .hidden   { display: none; }
 .unhidden { display: block; }
@@ -27,19 +68,17 @@ h3 {
 #drop_zone {
 	width: auto;
 	height: 100px;
-	border: 10px solid #DDD;
+	border: 10px dashed #d8e3ea;
 	border-radius: 15%;
-	background-color: #2E3134;
+	background-color: #579194;
 	margin-left:20%; 
 	margin-right:20%;
 	text-align: center;
-	color: #BBB;
+	color: #0e2f31;
 	font-size: 2em;
 	font-family: Courier New;
 	padding: 2%;
 	
-	border-style: solid;
-   	border-color: #DDD;
 	transition:.15s;
 }
 .thumb {
@@ -82,57 +121,26 @@ table.table th        { vertical-align: top; font-size: 150%;}
 ol.ol_output {color: black; font-weight: bold; }
 li {border-radius: 2px; padding: 1%;}
 
-li.repeated                    { background-color: #ff9a9a;}
+li.repeated                    { background-color: #c7ba5e;}
 li.repeated span               { color: white; }
-li.repeated:hover span         { color: #ff0000; transition:.5s; }
+li.repeated:hover span         { color: #897c1d; transition:.5s; }
 
-li.header                      { background-color: #e6efff; }
+li.header                      { background-color: #5e75a1; }
 li.header span                 { color: black; }
-li.header:hover span           { color: #005aff; transition:.5s; }
+li.header:hover span           { color: #233d71; transition:.5s; }
 
-li.comments                    { background-color: #ffead5;}
+li.comments                    { background-color: #f4b270; }
 li.comments span               { color: black; }
-li.comments:hover span         { color: #f37d0a; transition:.5s; }
+li.comments:hover span         { color: #da6d00; transition:.5s; }
 
-li.blanks                      { background-color: #ebffd5; }
+li.blanks                      { background-color: #b4d07a; }
 li.blanks span                 { color: black; }
-li.blanks:hover span           { color: #63bc03; transition:.5s; }
+li.blanks:hover span           { color: #668f12; transition:.5s; }
 
-li.nameEqualValue              { background-color: #d5fffb; }
+li.nameEqualValue              { background-color: #82bab4; }
 li.nameEqualValue span         { color: black;  }
-li.nameEqualValue:hover span   { color: #0dd7c2; transition:.5s; }
+li.nameEqualValue:hover span   { color: #008175; transition:.5s; }
 
-li.error                       { background-color: #ff9a9a; }
-li.error span                  { color: black; }
-li.error:hover span            { color: #ff0000; transition:.5s; }
-
-/*li.repeated                    { background-color: #ff9a9a; transition:.2s;}
-li.repeated span               { color: white; transition:.2s; }
-li.repeated:hover              { background-color: #ff0000; transition:.2s;} 
-li.repeated:hover span         { color: black; transition:.2s; }
-
-li.header                      { background-color: #e6efff; transition:.2s;}
-li.header span                 { color: black; transition:.2s; }
-li.header:hover                { background-color: #005aff; transition:.2s;}
-li.header:hover span           { color: white; transition:.2s; }
-
-li.comments                    { background-color: #ffead5; transition:.2s; }
-li.comments span               { color: black; transition:.2s; }
-li.comments:hover              { background-color: #f37d0a; transition:.2s; }
-li.comments:hover span         { color: white; transition:.2s; }
-
-li.blanks                      { background-color: #ebffd5; transition:.2s; }
-li.blanks span                 { color: black; transition:.2s; }
-li.blanks:hover                { background-color: #63bc03; transition:.2s; }
-li.blanks:hover span           { color: white; transition:.2s; }
-
-li.nameEqualValue              { background-color: #d5fffb; transition:.2s; }
-li.nameEqualValue span         { color: black; transition:.2s; }
-li.nameEqualValue:hover        { background-color: #0dd7c2; transition:.2s; }
-li.nameEqualValue:hover span   { color: white; transition:.2s; }
-
-li.error                       { background-color: #ff9a9a; transition:.2s; }
-li.error span                  { color: black; transition:.2s; }
-li.error:hover                 { background-color: #ff0000; transition:.2s; }
-li.error:hover span            { color: white; transition:.2s; }*/
-
+li.error                       { background-color: #d65f5f; }
+li.error span                  { color: white; }
+li.error:hover span            { color: #7a1313; transition:.5s; }
