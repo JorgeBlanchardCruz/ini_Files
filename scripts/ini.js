@@ -29,6 +29,8 @@ window.onload = function() {
 function handleFileSelect(evt) {
     evt.stopPropagation();
     evt.preventDefault();
+    
+    evt.target.style.background = "#2E3134";
 
 	var files = evt.dataTransfer.files; // FileList object.
 
@@ -40,10 +42,9 @@ function handleFileSelect(evt) {
 					  f.lastModifiedDate ? f.lastModifiedDate.toLocaleDateString() : 'n/a', '</li>');
     }
     var fileAttributes = '<ul>' + output.join('') + '</ul>';
-    document.getElementById('txtfileAttributes').innerHTML = fileAttributes;
+    document.getElementById('txtfileAttributes').innerHTML = fileAttributes; 
     
-    // obtener el contenido del fichero
-	calculate(evt.dataTransfer.files[0]);
+	calculate(evt.dataTransfer.files[0]);	
 }
 //-------------------------------------------------------------------------------------------
 function handleDragOver(evt) {
