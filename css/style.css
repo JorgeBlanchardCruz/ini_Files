@@ -1,77 +1,146 @@
 html *
 {
-   font-size: large;
-   /* The !important ensures that nothing can override what you've set in this style (unless it is also important). */
-   font-family: Arial;
+    font-size: small; 
+    font-family: Courier New;
 }
 
+body
+{
+	background-color: whitesmoke;
+}
+
+h1 {
+   text-align: center;
+   font-size: 400%;
+}
+h2 {
+	text-align: center;
+	font-size: 135%;
+}
+h3 {
+   text-align: center;
+   font-size: 75%;
+}
+.hidden   { display: none; }
+.unhidden { display: block; }
+
+#drop_zone {
+	width: auto;
+	height: 100px;
+	border: 10px solid #DDD;
+	border-radius: 15%;
+	background-color: #2E3134;
+	margin-left:20%; 
+	margin-right:20%;
+	text-align: center;
+	color: #BBB;
+	font-size: 2em;
+	font-family: Courier New;
+	padding: 2%;
+	
+	border-style: solid;
+   	border-color: #DDD;
+	transition:.15s;
+}
 .thumb {
     height: 75px;
     border: 1px solid #000;
     margin: 10px 5px 0 0;
-  }
-
-h1 { text-align: center; font-size: x-large; }
-th, td { vertical-align: top; text-align: left; }
-/* #finaltable * { color: white; background-color: black; } */
-
-/* #finaltable table { border-collapse:collapse; } */
-/* #finaltable table, td { border:1px solid white; } */
-#finaltable:hover td { background-color: blue; }
-tr:nth-child(odd) { background-color:#eee; }
-tr:nth-child(even) { background-color:#00FF66; }
-input { text-align: right; border: none; } /* Align input to the right */
-textarea { border: outset; border-color: white; }
-table { border: inset; border-color: white; }
-.hidden { display: none; }
-.unhidden { display: block; }
-table.center { margin-left:auto; margin-right:auto; }
-#result { border-color: red; }
-tr.error { background-color: red; }
-pre.output { background-color: white; }
-span.repeated { background-color: red }
-span.header { background-color: blue }
-span.comments { background-color: orange }
-span.blanks { background-color: green }
-span.nameEqualValue { background-color: cyan }
-span.error { background-color: red }
-
-body
-{
- background-color:#b0c4de; /* blue */
 }
 
-#drop_zone{
-	width:510px;
-    -moz-border-bottom-colors: none;
-    -moz-border-left-colors: none;
-    -moz-border-right-colors: none;
-    -moz-border-top-colors: none;
-    background-color: #2E3134;
-    border-color: rgba(0, 0, 0, 0);
-    border-radius: 3px;
-    border-style: solid;
-    border-width: 20px;
-    color: #7F858A;
-    font-size: 16px;
-    font-weight: bold;
-    margin-bottom: 30px;
-    padding: 40px 50px;
-    text-align: center;
-    text-transform: uppercase;
+table.table {
+	border: 0px;
+    background-color: rgba(0, 0, 0, 0);
+    margin-left:auto; 
+    margin-right:auto;
+
+    min-width: 90%;
+    max-width: 90%;
+  
+    border-spacing:0%;
+    border-collapse: separate;
 }
-.center{
-  margin:0 auto;
-  width:650px;
+table.table td.table_input {
+	border-radius: 5px;
+    overflow-x: auto;
+    max-width: 40%;
+    padding: 1%;
+    border-style: none;
+    background-color: white;
 }
-.title{
-  text-align: center;
-  color: rgb(86, 86, 86);
-  margin-bottom: 50px;
-  margin-top: 20px;
-  text-transform: lowercase;
-  cursor: default;
-  font-family: 'Pompiere', cursive;
-  font-size: 3em;
-  font-weight: bold;
+table.table td.table_output {
+	border-radius: 5px;
+	overflow-x: auto;
+	max-width: 60%;
+	
+    padding: 1%;
+    border-style: none;
+    background-color: white; 
 }
+table.table td        { vertical-align: top; text-align: left;} 
+table.table th        { vertical-align: top; font-size: 150%;} 
+
+ol.ol_output {color: black; font-weight: bold; }
+li {border-radius: 10px 10px 10px 10px; padding: 1%;}
+
+/*li.repeated                    { background-color: #ff9a9a; transition:.3s;}
+li.repeated span               { color: white; transition:.3s; }
+li.repeated:hover              { background-color: #ff0000; transition:.3s;} 
+li.repeated:hover span         { color: black; transition:.3s; }
+
+li.header                      { background-color: #e6efff; transition:.3s;}
+li.header span                 { color: black; transition:.3s; }
+li.header:hover                { background-color: #005aff; transition:.3s;}
+li.header:hover span           { color: white; transition:.3s; }
+
+li.comments                    { background-color: #ffead5; transition:.3s; }
+li.comments span               { color: black; transition:.3s; }
+li.comments:hover              { background-color: #f37d0a; transition:.3s; }
+li.comments:hover span         { color: white; transition:.3s; }
+
+li.blanks                      { background-color: #ebffd5; transition:.3s; }
+li.blanks span                 { color: black; transition:.3s; }
+li.blanks:hover                { background-color: #63bc03; transition:.3s; }
+li.blanks:hover span           { color: white; transition:.3s; }
+
+li.nameEqualValue              { background-color: #d5fffb; transition:.3s; }
+li.nameEqualValue span         { color: black; transition:.3s; }
+li.nameEqualValue:hover        { background-color: #0dd7c2; transition:.3s; }
+li.nameEqualValue:hover span   { color: white; transition:.3s; }
+
+li.error                       { background-color: #ff9a9a; transition:.3s; }
+li.error span                  { color: black; transition:.3s; }
+li.error:hover                 { background-color: #ff0000; transition:.3s; }
+li.error:hover span            { color: white; transition:.3s; }*/
+
+
+
+li.repeated                    { background-color: #ff9a9a;}
+li.repeated span               { color: white; }
+li.repeated:hover              { background-color: #ff0000; } 
+li.repeated:hover span         { color: black; }
+
+li.header                      { background-color: #e6efff;}
+li.header span                 { color: black; }
+li.header:hover                { background-color: #005aff;}
+li.header:hover span           { color: white; }
+
+li.comments                    { background-color: #ffead5; }
+li.comments span               { color: black;}
+li.comments:hover              { background-color: #f37d0a; }
+li.comments:hover span         { color: white; }
+
+li.blanks                      { background-color: #ebffd5; }
+li.blanks span                 { color: black; }
+li.blanks:hover                { background-color: #63bc03; }
+li.blanks:hover span           { color: white; }
+
+li.nameEqualValue              { background-color: }
+li.nameEqualValue span         { color: black; }
+li.nameEqualValue:hover        { background-color: #0dd7c2; }
+li.nameEqualValue:hover span   { color: white; }
+
+li.error                       { background-color: #ff9a9a; }
+li.error span                  { color: black; }
+li.error:hover                 { background-color: #ff0000;}
+li.error:hover span            { color: white; }

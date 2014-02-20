@@ -2,6 +2,13 @@
 
 
 window.onload = function() {
+	// Setup the dnd listeners.
+	var dropZone = document.getElementById('drop_zone');
+    dropZone.addEventListener('drop', handleFileSelect, false);
+    dropZone.addEventListener('dragover', handleDragOver, false);
+    dropZone.addEventListener('dragleave', handleDragLeave, false);
+   
+  
 	// If the browser supports localStorage and we have some stored data
 	if (window.localStorage){
 		if (localStorage.fileAttributes)
@@ -18,13 +25,7 @@ window.onload = function() {
 };
 
 //-------------------------------------------------------------------------------------------
-// drag and drop functions
-
-  // Setup the dnd listeners.
-  var dropZone = document.getElementById('drop_zone');
-  dropZone.addEventListener('dragover', handleDragOver, false);
-  dropZone.addEventListener('drop', handleFileSelect, false);
-  
+// drag and drop functions 
 function handleFileSelect(evt) {
     evt.stopPropagation();
     evt.preventDefault();
@@ -49,6 +50,13 @@ function handleDragOver(evt) {
     evt.stopPropagation();
     evt.preventDefault();
     evt.dataTransfer.dropEffect = 'copy'; // Explicitly show this is a copy.
+    evt.target.style.background = "white";
+}
+//-------------------------------------------------------------------------------------------
+function handleDragLeave(evt) {
+    evt.stopPropagation();
+    evt.preventDefault();
+    evt.target.style.background = "#2E3134";
 }
 //-------------------------------------------------------------------------------------------
 
@@ -87,14 +95,23 @@ function calculate(file){
 }
 //-------------------------------------------------------------------------------------------
 function tokensToString(tokens) {
-   var r = '';
+	var output_template = _.template(table_template.innerHTML);
+	var matches = [];
+   
+	for(var i in tokens) {
+		matches.push(JSON.stringify(tokens[i], undefined, 2));
+	}
+	   
+	return output_template({tokens: tokens, matches: matches}).substr(1);
+   
+ /*  var r = '';
    for(var i=0; i < tokens.length; i++) {
      var t = tokens[i]
      var s = JSON.stringify(t, undefined, 2);
      s = _.template(temp, {token: t, match: s});
      r += s;
    }
-   return '<ol>\n'+r+'</ol>';
+   return '<ol>\n'+r+'</ol>';*/
 }
 //-------------------------------------------------------------------------------------------
 function lexer(input) {
