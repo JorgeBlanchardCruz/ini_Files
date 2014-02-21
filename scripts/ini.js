@@ -84,9 +84,12 @@ function calculate(file){
 					
 			// LocalStorage
 			if (window.localStorage){
-				localStorage.fileAttributes = fileAttributes;
-				localStorage.initialinput  = contents;
-				localStorage.finaloutput  = pretty;
+				//localStorage.fileAttributes = fileAttributes;
+				//localStorage.initialinput  = contents;
+				//localStorage.finaloutput  = pretty;
+				localStorage.setItem('fileAttributes', fileAttributes);
+				localStorage.setItem('initialinput', contents);
+				localStorage.setItem('finaloutput', pretty);
 			}		
 		}
 		r.readAsText(file);		
