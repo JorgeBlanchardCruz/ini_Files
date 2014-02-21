@@ -9,19 +9,19 @@ window.onload = function() {
     dropZone.addEventListener('dragleave', handleDragLeave, false);
    
   
-	// If the browser supports localStorage and we have some stored data
-	if (window.localStorage){
-		if (localStorage.fileAttributes)
-			document.getElementById("txtfileAttributes").innerHTML = localStorage.fileAttributes;
-			
-		if (localStorage.initialinput)	
-			document.getElementById("initialinput").innerHTML = localStorage.initialinput;
-		
-		if (localStorage.finaloutput){
-			document.getElementById("finaloutput").innerHTML = localStorage.finaloutput;
-			out.className = 'unhidden';
-		}		
-	}
+ 	// If the browser supports localStorage and we have some stored data
+ 	if (window.localStorage){
+ 		if (localStorage.fileAttributes)
+ 			document.getElementById("txtfileAttributes").innerHTML = localStorage.fileAttributes;
+ 			
+ 		if (localStorage.initialinput)	
+ 			document.getElementById("initialinput").innerHTML = localStorage.initialinput;
+ 		
+ 		if (localStorage.finaloutput){
+ 			document.getElementById("finaloutput").innerHTML = localStorage.finaloutput;
+ 			out.className = 'unhidden';
+ 		}		
+ 	}
 };
 
 //-------------------------------------------------------------------------------------------
@@ -89,6 +89,7 @@ function calculate(file){
 			}		
 		}
 		r.readAsText(file);		
+				
 	} 
 	else{ 
 		alert("Failed to load file");
