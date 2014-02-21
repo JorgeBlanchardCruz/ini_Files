@@ -8,7 +8,7 @@ window.onload = function() {
     dropZone.addEventListener('dragover', handleDragOver, false);
     dropZone.addEventListener('dragleave', handleDragLeave, false);
    
-   alert("localStorage: "+localStorage);
+   //alert("localStorage: "+localStorage);
  	// If the browser supports localStorage and we have some stored data
  	if (window.localStorage){
  		if (window.localStorage.fileAttributes)
