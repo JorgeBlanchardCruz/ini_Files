@@ -12,13 +12,16 @@ window.onload = function() {
  	// If the browser supports localStorage and we have some stored data
  	if (window.localStorage){
  		if (localStorage.fileAttributes)
- 			document.getElementById("txtfileAttributes").innerHTML = localStorage.fileAttributes;
+ 			//document.getElementById("txtfileAttributes").innerHTML = localStorage.fileAttributes;
+			document.getElementById("txtfileAttributes").innerHTML = localStorage.getItem('fileAttributes');
  			
  		if (localStorage.initialinput)	
- 			document.getElementById("initialinput").innerHTML = localStorage.initialinput;
+ 			//document.getElementById("initialinput").innerHTML = localStorage.initialinput;
+			document.getElementById("initialinput").innerHTML = localStorage.getItem('initialinput');
  		
  		if (localStorage.finaloutput){
- 			document.getElementById("finaloutput").innerHTML = localStorage.finaloutput;
+ 			//document.getElementById("finaloutput").innerHTML = localStorage.finaloutput;
+			document.getElementById("finaloutput").innerHTML = localStorage.getItem('finaloutput');
  			out.className = 'unhidden';
 
  		}		
