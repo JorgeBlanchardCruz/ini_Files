@@ -45,7 +45,7 @@ function handleFileSelect(evt) {
     var fileAttributes = '<ul>' + output.join('') + '</ul>';
     document.getElementById('txtfileAttributes').innerHTML = fileAttributes; 
     
-	calculate(evt.dataTransfer.files[0]);	
+	calculate(evt.dataTransfer.files[0], fileAttributes);	
 }
 //-------------------------------------------------------------------------------------------
 function handleDragOver(evt) {
@@ -69,7 +69,7 @@ var temp = '<li> <span class = "<%= token.type %>"> <%= match %> </span>\n';
 
 
 //-------------------------------------------------------------------------------------------
-function calculate(file){	
+function calculate(file, fileAttributes){	
 	if (file) {	
 		var r = new FileReader();
 		
