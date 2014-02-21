@@ -8,16 +8,16 @@ window.onload = function() {
     dropZone.addEventListener('dragover', handleDragOver, false);
     dropZone.addEventListener('dragleave', handleDragLeave, false);
    
-   //alert("localStorage: "+localStorage);
+   
  	// If the browser supports localStorage and we have some stored data
  	if (window.localStorage){
- 		if (window.localStorage.fileAttributes)
+ 		if (localStorage.fileAttributes)
  			document.getElementById("txtfileAttributes").innerHTML = localStorage.fileAttributes;
  			
- 		if (window.localStorage.initialinput)	
+ 		if (localStorage.initialinput)	
  			document.getElementById("initialinput").innerHTML = localStorage.initialinput;
  		
- 		if (window.localStorage.finaloutput){
+ 		if (localStorage.finaloutput){
  			document.getElementById("finaloutput").innerHTML = localStorage.finaloutput;
  			out.className = 'unhidden';
  		}		
