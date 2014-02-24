@@ -143,7 +143,7 @@ li.nameEqualValue:hover span   { color: #008175; transition:.5s; }
 
 li.nameEqualComments           { background-color: #006666; }
 li.nameEqualComments           { color: black;  }
-li.nameEqualComments:hover span{ color: #000066; transition:.5s; }
+li.nameEqualComments:hover span{ color: #006633; transition:.5s; }
 
 li.error                       { background-color: #d65f5f; }
 li.error span                  { color: white; }

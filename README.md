@@ -8,6 +8,7 @@ Parser de Archivos INI en JavaScript
 * **Profesor:** Casiano Rodriguez
 * **Práctica:** Parser de Archivos INI en JavaScript
 * **Autor:** Jorge O. Blanchard Cruz y Gonzalo J. García Martin
+* **Version:** 1.5
 
 Practica de Parser de Archivos INI Values en JavaScript, es la segunda práctica de la asignatura de procesadores del lenguaje
 
